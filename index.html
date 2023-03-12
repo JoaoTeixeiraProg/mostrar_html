@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Everson da Luz">
+        <title>Mostrar imagem ao passar mouse no link</title>
+        <style type="text/css">
+
+            html{
+                background-image: linear-gradient(to right,rgb(46,139,87), rgb(47,79,79));
+                width: 100%;
+                height: 100%;
+            }
+
+            body{
+                text-align: center;
+                align-items: center;
+            }
+
+            .header{
+            left: 0;
+            padding-left: 36px;
+            padding-right: 30px;
+            position: fixed;
+            top: 0;
+            -webkit-transition: opacity 0.5s,padding-left .125s;
+            transition: opacity 0.5s,padding-left .125s;
+            white-space: nowrap;
+            width: 100%;
+            height: 60px;
+            z-index: 20;
+        }
+        
+            .header-center{
+                display: table;
+                min-width: 100%;
+                table-layout: fixed;
+            }
+            
+            .header-invisible{
+                color: inherit;
+                border: none;
+                margin-right: 2000px;
+            }
+
+            
+            .header-text{
+                font-family: Arial, Helvetica, sans-serif;
+                color:black;
+                font-size: 30px;
+                border: none;
+                display: inline-block;
+                line-height: 1;
+                outline: none;
+                padding: 16px 12px;
+                text-decoration: none;
+                text-overflow: ellipsis;
+            }
+            
+            .header-color {
+                background-image: linear-gradient(to right,#00FFFF, #002046);
+                bottom: 0;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                -webkit-transition: opacity .125s;
+                transition: opacity .125s;
+                width: 100%;
+                z-index: -10;
+            }
+
+            .header-container{
+                height: 100vh;
+                background-image: linear-gradient(to right,rgb(46,139,87), rgb(47,79,79));
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 112px;
+                justify-items: center;
+            }
+
+            .container{
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                margin-left: 20%;
+                margin-top: 50px;
+            }
+
+            .title{
+                margin-top: 100px;
+                color:white;
+                font-size: 26px;
+            }
+
+            ul {
+                margin: 20px 0px 0px 20px;
+                list-style: none;
+            }
+            a {
+                position: relative; /* Para que a imagem não saia fora do link */
+                display: table;
+                padding: 15px;
+                width: 150px;
+                border:1px white solid;
+                background-color: transparent;
+                text-decoration: none;
+                color: #FFFFFF;
+                text-align: center;
+                vertical-align: baseline;
+            }
+
+            .button_top:hover{
+                background-color: #C27419;
+                border: 1px 0px 0px 1px solid #C27419;
+            }
+
+            a span {
+                display: none; /* Aqui você define que todo SPAN que estiver dentro de um A estará invisível */
+            }
+            a:hover span {
+                display: block; /* Tranforma o SPAN em um elemento do tipo bloco */
+                position: absolute; /* Para você poder posicionar a vontade, sem quebrar o layour em volta */
+                top: 0px; /* Para ficar na mesma altura do link */
+                left: 100%; /* Empurra a imagem para fora do link, ficando a lado do mesmo */
+                /*border: 1px #CCCCCC solid; /* Estilo extra, lembrando que você pode colocar qualquer estilo nesse elemento */
+            }
+
+            img{
+                height: 520px;
+                width: 900px;
+            }
+
+            .button_css:hover{
+                background-color: #4FA4DD;
+                border: 1px 0px 0px 1px solid #4FA4DD;
+            }
+
+            .button_javascript:hover{
+                background-color: #F8DA59;
+                border: 1px 0px 0px 1px solid #F8DA59;
+                color:black;
+            }
+
+            .button_php:hover{
+                background-color: #556594;
+                border: 1px 0px 0px 1px solid #556594;
+            }
+
+            .button_bottom:hover{
+                background-color: #22064F;
+                border: 1px 0px 0px 1px solid #22064F;
+            }
+
+            .button_back{
+                margin-left: 441px;
+                margin-top: 15px;
+                border-radius: 15px;
+            }
+
+            .button_back:hover{
+                background-color: #002046;
+                border: 1px solid #002046;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-center">
+                <div class="T1fmSc">
+                    <div class="header-invisible" href="#">
+                        <span class="header-text"><b>Portifolio - João Teixeira</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-color"></div>
+        </div>
+
+        <div class="title"><h2>Mostrar Imagem ao Passar o Mouse</h2></div>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="https://images.tcdn.com.br/files/1093137/themes/427/img/HTML.png?311.14326147928983" class="button_top">HTML5<span><img src="https://images.tcdn.com.br/files/1093137/themes/427/img/HTML.png?311.14326147928983" alt="html" /></span></a>
+                </li>
+                <li>
+                    <a href="https://images.tcdn.com.br/files/1093137/themes/427/img/CSS2.png?962.135558457963" class="button_css">CSS<span><img src="https://images.tcdn.com.br/files/1093137/themes/427/img/CSS2.png?962.135558457963" alt="css" /></span></a>
+                </li>
+                <li>
+                    <a href="https://images.tcdn.com.br/files/1093137/themes/427/img/JavaScript.png?556.9656933671411" class="button_javascript">JavaScript<span><img src="https://images.tcdn.com.br/files/1093137/themes/427/img/JavaScript.png?556.9656933671411" alt="javascript" /></span></a>
+                </li>
+                <li>
+                    <a href="https://images.tcdn.com.br/files/1093137/themes/427/img/PHP.png?355.572126845873" class="button_php">PHP<span><img src="https://images.tcdn.com.br/files/1093137/themes/427/img/PHP.png?355.572126845873" alt="php" /></span></a>
+                </li>
+                <li>
+                    <a href="https://images.tcdn.com.br/files/1093137/themes/427/img/GitHub.png?599.0745661630654" class="button_bottom">GitHub<span><img src="https://images.tcdn.com.br/files/1093137/themes/427/img/GitHub.png?599.0745661630654" alt="github" /></span></a>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="button_back">Voltar</a>
+    </body>
+</html>
